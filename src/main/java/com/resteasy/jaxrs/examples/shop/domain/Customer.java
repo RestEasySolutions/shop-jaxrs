@@ -1,6 +1,7 @@
 package com.resteasy.jaxrs.examples.shop.domain;
 
 /**
+ * Domain class to hold the customer details
  * Created by Ant Brown on 21/01/2016.
  */
 public class Customer {
