@@ -1,5 +1,7 @@
 package com.resteasy.jaxrs.examples.shop.services;
 
+import org.springframework.stereotype.Component;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -21,11 +23,12 @@ import java.io.InputStream;
 
 // Identifies this resource (type) in the request URL
 @Path("/customers")
+@Component
 public interface CustomerResource {
 
-    @POST
 	// What we expect the format of the request to be
 	// There needs to be a matching Content-Type header in the request otherwise this will error
+	@POST
 	@Consumes("application/json")
 	Response createCustomer(InputStream is);
 
